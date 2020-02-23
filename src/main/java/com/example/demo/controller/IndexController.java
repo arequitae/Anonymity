@@ -1,8 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.IRegService;
-import com.example.demo.service.RegService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,9 +23,7 @@ public class IndexController {
     Boolean reg(@RequestParam("loginPwd") String loginNum, @RequestParam("userId") Integer userId ){
         String pwd = creatMD5(loginNum);
         System.out.println(userId+":"+loginNum);
-        RegService regService=new RegService();
-        regService.regUser(userId,pwd);
-        return true;
+               return true;
     }
     private String creatMD5(String loginNum){
         // 生成一个MD5加密计算摘要
