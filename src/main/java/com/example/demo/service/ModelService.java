@@ -1,10 +1,10 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.Model;
+import com.example.demo.dto.RiskModel;
 
 import java.util.List;
 
 public interface ModelService {
 
-    List<Model> findByModelId(Integer modelId);
+    List<RiskModel> findAll();
 }

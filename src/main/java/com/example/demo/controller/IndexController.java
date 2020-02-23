@@ -13,29 +13,11 @@ import java.security.NoSuchAlgorithmException;
 @Controller
 public class IndexController {
 
-    @GetMapping("/")//匹配路径
+   // @GetMapping("/")//匹配路径
     public String index()
     {
         return "index";
     }
-    @RequestMapping("/reg")
-    @ResponseBody
-    Boolean reg(@RequestParam("loginPwd") String loginNum, @RequestParam("userId") Integer userId ){
-        String pwd = creatMD5(loginNum);
-        System.out.println(userId+":"+loginNum);
-               return true;
-    }
-    private String creatMD5(String loginNum){
-        // 生成一个MD5加密计算摘要
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("MD5");
-            md.update(loginNum.getBytes());
 
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return new BigInteger(1, md.digest()).toString(16);
-    }
 }
 

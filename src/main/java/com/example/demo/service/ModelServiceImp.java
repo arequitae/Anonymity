@@ -1,9 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.Model;
-import com.example.demo.mapper.ModelMapper;
+import com.example.demo.dto.RiskModel;
 import com.example.demo.repository.ModelRepository;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +13,8 @@ public class ModelServiceImp implements ModelService{
     private ModelRepository modelRepository;
 
     @Override
-    public List<Model> findByModelId(Integer modelId) {
+    public List<RiskModel> findAll() {
 
-        return modelRepository.findByModelId(modelId);
+        return modelRepository.findAll();
     }
 }
