@@ -18,9 +18,9 @@ public class LoginController {
     private AdminService adminService;
 
     //跳转首页（登录页）
-    @RequestMapping("toIndex")
+    @RequestMapping("/u/toIndex")
     public String show(){
-        return "index_test";
+        return "index";
     }
 
     //登录操作

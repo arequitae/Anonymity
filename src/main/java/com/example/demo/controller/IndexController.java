@@ -16,16 +16,17 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @Controller
+@RequestMapping("/hhh")
 public class IndexController {
 
     @Autowired
     private ModelService modelService;
-    @GetMapping("/")//匹配路径
+    @GetMapping("/hhh")//匹配路径
     public String index(Model model)
     {
-            List<RiskModel> riskModelList=modelService.findAll();
-            model.addAttribute("riskModelList",riskModelList);
-            return "index_test";
+           List<RiskModel> riskModelList=modelService.findAll();
+           model.addAttribute("riskModelList",riskModelList);
+            return "index";
         }
 
 
